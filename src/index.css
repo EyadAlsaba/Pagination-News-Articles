@@ -1,8 +1,154 @@
-:root{
-  --lightGrey: #f2f2f2
-  --grey: #404040
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
+
 body {
-  background-color: var(--lightGrey);
-  color: var(--grey);
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.5s linear;
+  line-height: 2rem;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  font-size: 22px;
+  color: #333;
+  background-color: #eee;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn {
+  text-transform: capitalize;
+  border-radius: 8px;
+  padding: .5rem;
+  margin: .5rem;
+  border: 1px solid #324d67;
+  font-size: 1.1rem;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+  letter-spacing: .5px;
+  transition: 0.5s;
+}
+
+.rm:hover {
+  background-color: rgb(204, 38, 38);
+  color: #fff;
+  transition: 0.5s;
+}
+
+.link-url {
+  transition: 0.5s;
+  font-size: 1.2rem;
+  padding: .2rem;
+}
+
+.link-url:hover {
+  transition: 0.5s;
+  opacity: 0.5;
+}
+
+.mode {
+  float: right;
+  margin: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.mode:hover {
+  animation: round 1s linear;
+}
+
+.user-controller {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  margin: 1rem 0;
+  width: 100%;
+  font-size: 2rem;
+}
+
+.form {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.label {
+  font-size: 2.5rem;
+}
+
+.form .user-input {
+  padding: .8rem;
+  margin: 1.5rem auto;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #324d67;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: inherit;
+  display: block;
+  width: 33%;
+}
+
+.user-input:focus-visible {
+  outline: none;
+  font-style: oblique;
+}
+
+.control-pages {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.news-container {
+  margin: .5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.article-card {
+  border-radius: 5px;
+  margin: 1.5rem 1rem;
+  padding: .5rem;
+  width: 48%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.20), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.article-card>* {
+  margin: .5rem;
+}
+
+.article-info {
+  opacity: 0.5;
+}
+
+@keyframes round {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  50% {
+    transform: rotateZ(180deg);
+  }
+
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+@media screen and (max-width:960px) {
+  .article-card {
+    width: 100%;
+  }
 }
